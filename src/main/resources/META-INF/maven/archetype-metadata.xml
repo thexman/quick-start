@@ -55,5 +55,20 @@ under the License.
         <fileSet filtered="true" packaged="true">
             <directory>src/test/resources</directory>
         </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory/>
+            <includes>
+                <include>.github</include>
+                <include>.gitignore-template</include>
+                <include>.pre-commit-config.yaml</include>
+                <include>LICENSE</include>
+                <include>lombok.config</include>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" packaged="false">
+            <directory>.github/workflows</directory>
+        </fileSet>
     </fileSets>
 </archetype-descriptor>

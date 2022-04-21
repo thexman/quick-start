@@ -1,5 +1,5 @@
-# quick-start
-Maven archetype for quick-start projects
+# $artifactId
+Maven project generted with com.a9ski:quick-start archetype
 
 
 # Development guide
