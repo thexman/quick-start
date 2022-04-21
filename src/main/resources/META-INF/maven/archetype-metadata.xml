@@ -19,16 +19,41 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-  name="${artifactId}">
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+                      name="${artifactId}">
 
-  <fileSets>
-    <fileSet filtered="true" packaged="true">
-      <directory>src/main/java</directory>
-    </fileSet>
-    <fileSet filtered="true" packaged="true">
-      <directory>src/test/java</directory>
-    </fileSet>
-  </fileSets>
+    <requiredProperties>
+        <requiredProperty key="inceptionYear">
+            <defaultValue>${package.getClass().forName("java.time.LocalDateTime").getMethod("now").invoke(null).format($package.Class.forName("java.time.format.DateTimeFormatter").getMethod("ofPattern", $package.Class).invoke(null, "yyyy"))}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="githubUser">
+            <defaultValue>${package.getClass().forName("java.lang.System").getProperty("user.name")}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="developerName">
+            <defaultValue>${package.getClass().forName("java.lang.System").getProperty("user.name")}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="organizationName">
+            <defaultValue>${package.getClass().forName("java.lang.System").getProperty("user.name")}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="email">
+            <defaultValue>${package.getClass().forName("java.lang.System").getProperty("user.name").concat("@internet.rar")}</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <fileSets>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/resources</directory>
+        </fileSet>
+    </fileSets>
 </archetype-descriptor>

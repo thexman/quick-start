@@ -14,7 +14,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 /**
- * Unit test for simple App.
+ * Unit test for the Application class.
  */
 public class ApplicationTest {
     @Mock
@@ -30,10 +30,10 @@ public class ApplicationTest {
 
 
     /**
-     * Rigorous Test :-)
+     * Testing add
      */
     @Test
-    public void calculatorShouldReturnSum() {
+    public void calculatorAddShouldReturnSum() {
         final CommandLineArguments args = CommandLineArguments.builder()
                 .x(1)
                 .y(2)
@@ -75,7 +75,7 @@ public class ApplicationTest {
     }
 
     /**
-     * Rigorous Test :-)
+     * Application main should method should invoke the calculator.
      */
     @Test
     public void mainShouldInvokeCalculator() {

@@ -6,7 +6,7 @@ import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Hello world!
+ * Application main class.
  */
 @Log4j2
 public class Application {
@@ -18,7 +18,6 @@ public class Application {
     public static void main(final String[] args) {
         log.info("Starting application...");
         final CommandLineArguments arguments = CommandLineArguments.builder().build();
-        //String[] argv = { "-log", "2", "-groups", "unit" };
         final JCommander commander = JCommander.newBuilder()
                 .addObject(arguments)
                 .programName("myapp")

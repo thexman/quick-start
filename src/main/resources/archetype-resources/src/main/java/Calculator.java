@@ -1,7 +1,7 @@
 package $package;
 
 /**
- * Simple calculator interface
+ * Simple calculator interface.
  */
 public interface Calculator {
     int add(int x, int y);

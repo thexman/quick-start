@@ -8,7 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
- * Hello world!
+ * Command line arguments passed to the application.
  */
 @Builder(toBuilder = true)
 @Data
