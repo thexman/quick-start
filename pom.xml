@@ -11,7 +11,38 @@
 
     <name>Archetype - quick-start</name>
 
-    <url>http://www.example.com</url>
+    <description>Maven archetype for java CLI projects</description>
+
+    <url>https://github.com/thexman/quick-start</url>
+    <inceptionYear>2022</inceptionYear>
+    <organization>
+        <name>a9ski</name>
+        <url>http://www.a9ski.com/</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>thexman</id>
+            <name>Kiril Arabadzhiyski</name>
+            <email>thexman@dir.bg</email>
+            <url>https://github.com/thexman</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/thexman/quick-start</url>
+        <connection>scm:git:ssh://git@github.com/thexman/quick-start.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/thexman/quick-start.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <licenses>
+        <license>
+            <name>apache_v2</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
