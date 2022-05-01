@@ -1,0 +1,11 @@
+= Release 1.0.0 =
+Released: 2022-05-02
+
+== Features ==
+ * Log4j rolling and console appenders
+ * Lombok configuration
+ * Pre-commit hook
+ * .gitignore
+ * Generating simple calculator application
+ * JCommander for parsing CLI arguments
+ * JUnit 5 test with Mockito
