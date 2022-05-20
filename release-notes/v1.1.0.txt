@@ -1,0 +1,12 @@
+= Release 1.1.0 =
+Released: 2022-05-21
+
+== Features ==
+ * Updated JUnit (5.8.2 -> 5.9.0-M1).
+ * Updated Mockito (4.4.0 -> 4.5.1).
+ * Updated Log4j2 (2.17.1 -> 2.17.2).
+ * Updated httpclient (5.1.3 -> 5.2-alpha).
+ * Configured log4j2 to use async appenders with DisruptorBlockingQueue.
+ * Changed log4j2 pattern layout to use the full date and process PID.
+ * Configured required command line parameters in CommandLineArguments.
+ * Added eclipse files to .gitignore.

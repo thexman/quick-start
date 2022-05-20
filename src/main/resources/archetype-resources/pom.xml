@@ -50,9 +50,10 @@
         <maven.test.plugins.version>3.0.0-M6</maven.test.plugins.version>
 
         <lombok.version>1.18.24</lombok.version>
-        <junit.version>5.8.2</junit.version>
-        <mockito.version>4.4.0</mockito.version>
-        <log4j2.version>2.17.1</log4j2.version>
+        <junit.version>5.9.0-M1</junit.version>
+        <mockito.version>4.5.1</mockito.version>
+        <log4j2.version>2.17.2</log4j2.version>
+        <disruptor.version>1.2.19</disruptor.version>
         <resilience4j.version>1.7.1</resilience4j.version>
         <commons-io.version>2.11.0</commons-io.version>
         <commons-lang.version>3.12.0</commons-lang.version>
@@ -61,10 +62,11 @@
         <commons-text.version>1.9</commons-text.version>
         <commons-compress.version>1.21</commons-compress.version>
         <commons-csv.version>1.9.0</commons-csv.version>
-        <httpclient.version>5.1.3</httpclient.version>
+        <httpclient.version>5.2-alpha1</httpclient.version>
         <jcommander.version>1.82</jcommander.version>
         <guava.version>31.1-jre</guava.version>
         <gson.version>2.9.0</gson.version>
+        <gson-configuration.version>1.4.1</gson-configuration.version>
     </properties>
 
     <dependencies>
@@ -87,6 +89,17 @@
             <artifactId>log4j-core</artifactId>
             <version>${log4j2.version}</version>
         </dependency>
+        <dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-slf4j18-impl</artifactId>
+		    <version>${log4j2.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>com.conversantmedia</groupId>
+		  <artifactId>disruptor</artifactId>
+		  <version>${disruptor.version}</version>
+		</dependency>
+
 
         <!-- Apache Commons libraries -->
         <dependency>
@@ -145,6 +158,12 @@
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
         </dependency>
+        <dependency>
+		    <groupId>io.goodforgod</groupId>
+		    <artifactId>gson-configuration</artifactId>
+		    <version>${gson-configuration.version}</version>
+		</dependency>
+
 
         <!-- Fault tolerance library -->
         <dependency>
