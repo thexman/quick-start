@@ -5,7 +5,7 @@
 
     <groupId>com.a9ski.archetypes</groupId>
     <artifactId>quick-start</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1.0</version>
     <packaging>maven-archetype</packaging>
 
     <name>Archetype - quick-start</name>
@@ -32,7 +32,7 @@
         <url>https://github.com/thexman/quick-start</url>
         <connection>scm:git:ssh://git@github.com/thexman/quick-start.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/thexman/quick-start.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v1.1.0</tag>
     </scm>
     <licenses>
         <license>
