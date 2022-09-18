@@ -17,16 +17,6 @@
             </Policies>
             <DefaultRolloverStrategy max="20"/>
         </RollingFile>
-
-        <Async name="ConsoleAnsync">
-            <AppenderRef ref="Console"/>
-            <DisruptorBlockingQueue/>
-        </Async>
-
-        <Async name="FileAnsync">
-            <AppenderRef ref="File"/>
-            <DisruptorBlockingQueue/>
-        </Async>
     </Appenders>
 
     <Loggers>
@@ -39,9 +29,9 @@
 
         <Logger name="$package" level="DEBUG" />
 
-        <Root level="INFO" additivity="false">
-            <AppenderRef ref="ConsoleAnsync"/>
-            <AppenderRef ref="FileAnsync"/>
+        <Root level="INFO" additivity="false" includeLocation="true">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
         </Root>
     </Loggers>
 </Configuration>

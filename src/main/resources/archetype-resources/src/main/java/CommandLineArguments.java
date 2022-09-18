@@ -26,7 +26,7 @@ public class CommandLineArguments {
     private Integer y = 1;
 
     @Builder.Default
-    @Parameter(names = "--operation", required = true, description = "Math operation to perform")
+    @Parameter(names = "--operation", required = false, description = "Math operation to perform")
     private String operation = "add";
 
     @Builder.Default

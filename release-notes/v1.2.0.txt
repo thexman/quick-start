@@ -1,0 +1,20 @@
+= Release 1.2.0 =
+Released: 2022-09-18
+
+== Features ==
+ * Updated JUnit (5.9.0-M1 -> 5.9.0).
+ * Updated Mockito (4.5.1 -> 4.8.0).
+ * Updated Log4j2 (2.17.2 -> 2.18.0).
+ * Updated httpclient (5.2-alpha -> 5.2-beta).
+ * Updated gson (2.9.0 -> 2.9.1).
+ * Updated gson-configuration (1.4.1 -> 1.4.2).
+ * Configured log4j2 to use standard async loggers with LMAX disruptor (1.2.19).
+ * Changed application to use Slf4j (with Log4j Binding).
+ * Added logs gzip files to .gitignore.
+ * Added git.properties with GIT commit information and build time.
+ * Added ApplicationMetadata class to read the git.properties.
+ * Add configuration to pom.xml in order to run `mvn exec:java`.
+ * Copies all dependencies to target/libs directory.
+
+== Fixes ==
+ * Added missing variables to build.yml for github actions.

@@ -1,17 +1,22 @@
 package $package;
 
+import java.io.IOException;
+import java.util.Properties;
+
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.ParameterException;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 /**
  * Application main class.
  */
-@Log4j2
+@Slf4j
 public class Application {
 
     private Calculator calculator;
+
+    private final ApplicationMetadata applicationMetadata;
 
     public static Application INSTANCE;
 
@@ -32,6 +37,19 @@ public class Application {
             commander.usage();
         }
         log.info("Exited application");
+    }
+
+    public Application() {
+        ApplicationMetadata m = null;
+        try {
+            m = ApplicationMetadata.fromResource("/git.properties");
+            log.info("Version: {}, CommitId {}, Branch: {}, Commit timestamp: {}, Build timestamp: {}",
+                    m.getVersion(), m.getCommitId(), m.getBranch(),
+                    m.getCommitTimestamp(), m.getBuildTimestamp());
+        } catch (final IOException ex) {
+            log.error("Cannot read application metadata", ex);
+        }
+        this.applicationMetadata = m;
     }
 
     protected static Application assignInstance(final Application instance) {
@@ -63,7 +81,7 @@ public class Application {
         return new Calculator() {
             @Override
             public int add(int x, int y) {
-                throw new UnsupportedOperationException();
+                return x + y;
             }
 
             @Override
@@ -73,7 +91,7 @@ public class Application {
 
             @Override
             public void save(int x) {
-                throw new UnsupportedOperationException();
+                System.out.println("Saving result " + x);
             }
         };
     }
