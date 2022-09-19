@@ -1,5 +1,5 @@
 # $artifactId
-Maven project generted with com.a9ski:quick-start archetype
+Maven project generated with com.a9ski:quick-start archetype
 
 
 # Development guide

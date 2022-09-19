@@ -1,6 +1,12 @@
 # quick-start
 Maven archetype for quick-start projects
 
+# Usage
+
+Create a new maven project:
+```
+mvn archetype:generate -DarchetypeGroupId=com.a9ski.archetypes -DarchetypeArtifactId=quick-start
+```
 
 # Development guide
 
