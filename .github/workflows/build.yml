@@ -36,7 +36,7 @@ jobs:
         run:
           sed -i s/-SNAPSHOT/${{steps.date.outputs.date}}.java-${{matrix.Java}}.${{matrix.os}}/g pom.xml
       - name: Build with Maven
-        run: mvn -B install --file pom.xml
+        run: ./mvnw -B install --file pom.xml
       - name: Copy build artifact
         run: mkdir artifacts && cp target/*.jar artifacts
       - name: Upload jar artifact
