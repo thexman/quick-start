@@ -48,7 +48,10 @@ mvn release:clean
 
 to delete release descriptor and POM backups.
 
-## 4. Reverting a release
+## 4. Release the repository from nexus
+Go to https://oss.sonatype.org/#stagingRepositories and find the repository. Next choose to close. After being closed click the release button.
+
+## 5. Reverting a release
 If the `release.properties` file is present
 ```
 gh release delete v1.0.0
