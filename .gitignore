@@ -28,6 +28,8 @@ hs_err_pid*
 
 # Maventarget/*
 /target/
+release.properties
+pom.xml.releaseBackup
 
 # Eclipse
 .project
