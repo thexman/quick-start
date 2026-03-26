@@ -61,7 +61,7 @@
         <commons-collections.version>4.4</commons-collections.version>
         <commons-math.version>3.6.1</commons-math.version>
         <commons-text.version>1.11.0</commons-text.version>
-        <commons-compress.version>1.25.0</commons-compress.version>
+        <commons-compress.version>1.26.0</commons-compress.version>
         <commons-csv.version>1.10.0</commons-csv.version>
         <httpclient.version>5.3.1</httpclient.version>
         <jcommander.version>1.82</jcommander.version>
