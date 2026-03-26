@@ -103,7 +103,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.5.0</version>
                 <configuration>
                     <!-- Required so that .gitignore gets included in archetypes -->
                     <!-- See https://issues.apache.org/jira/browse/MRESOURCES-190 -->
