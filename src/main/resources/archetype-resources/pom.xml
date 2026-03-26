@@ -57,7 +57,7 @@
         <log4j2.version>2.22.1</log4j2.version>
         <resilience4j.version>2.2.0</resilience4j.version>
         <commons-io.version>2.15.1</commons-io.version>
-        <commons-lang.version>3.14.0</commons-lang.version>
+        <commons-lang.version>3.18.0</commons-lang.version>
         <commons-collections.version>4.4</commons-collections.version>
         <commons-math.version>3.6.1</commons-math.version>
         <commons-text.version>1.11.0</commons-text.version>
